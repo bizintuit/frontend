@@ -9,7 +9,6 @@ const Xyz = () => {
           Success Begins Here”
         </h1>
       </div>
-
       <div className="flex flex-col items-center w-1/2 h-[250px] justify-center">
         <div className="justify-center grid-perspective w-full h-full bg-transparent grid-cols-5 grid-rows-3 grid">
           <div className=" border-[1px] border-t-transparent border-opacity-50"></div>
