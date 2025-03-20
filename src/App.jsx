@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './Components/General/NavBar'
 import Contact from './Components/LandingPage/Contact'
+import Footer from './Components/General/Footer'
 // import Xyz from './Components/LandingPage/xyz'
 
 const App = () => {
@@ -8,7 +9,8 @@ const App = () => {
     <div className='h-screen w-screen'>
       {/* <NavBar/> */}
       {/* <Xyz/> */}
-      <Contact/>
+      {/* <Contact/> */}
+      <Footer/>
     </div>
   )
 }
