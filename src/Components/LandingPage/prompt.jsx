@@ -2,7 +2,7 @@ import React from "react";
 
 const Prompt = () => {
     return (
-        <div className="h-[100%] w-full flex flex-col items-center justify-center bg-black text-white relative overflow-hidden">
+        <div className="h-auto w-full flex flex-col items-center justify-center bg-black text-white overflow-hidden">
             <div className="w-full text-center">
                 <h1 className="bg-black w-full text-4xl md:text-5xl font-bold text-neutral-200 relative z-10">
                     “Your Journey to <br />

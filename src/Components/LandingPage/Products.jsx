@@ -2,7 +2,7 @@ import React from 'react'
 
 const Products = () => {
   return (
-    <div className="h-[100%] w-full flex flex-col items-center justify-center bg-black text-white py-7">
+    <div className="h-auto w-full flex flex-col items-center justify-center bg-black text-white py-7">
             <div className="h-[10%] w-full flex text-center items-center justify-center">
                 <h1 className="bg-black h-auto w-full text-3xl font-bold text-while">
                     Our Products

@@ -5,13 +5,13 @@ import Hero from './LandingPage/Hero';
 import Features from './LandingPage/Features';
 import Prompt from './LandingPage/Prompt';
 import Contact from './LandingPage/Contact';
-import Products from './LandingPage/Features';
+import Products from './LandingPage/Products';
 
 const LandingPage = () => {
     return (
         <div className='h-full w-full'>
             <NavBar/>
-            {/* <Hero/> */}
+            <Hero/>
             <Products/>
             <Features/>
             <Prompt/>
