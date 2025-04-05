@@ -9,22 +9,26 @@ const CompanySignUp = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const AdminLogin = async () => {
+    const CompanySignUpFunction = async () => {
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/company_login/",
+                "http://localhost:8000/api/company_registration/",
                 {
                     email: email,
+                    company_name: companyName,
                     password: password,
+                    password2: confirmPassword,
                 }
             );
 
-            console.log(response.data);
+            alert(response.data.message);
         } catch (err) {
             console.error("Login failed:", err);
         }
         setEmail("");
+        setCompanyName("")
         setPassword("");
+        setConfirmPassword("")
     };
 
     return (
@@ -69,7 +73,7 @@ const CompanySignUp = () => {
                     </div>
                 </div>
                 <div className="h-1/6 w-5/6 flex flex-col gap-2">
-                    <ButtonField onClickFunc={AdminLogin} prompt={"Sign up"} />
+                    <ButtonField onClickFunc={CompanySignUpFunction} prompt={"Sign up"} />
                 </div>
                 <div className="h-1/6 w-5/6 flex flex-col">
                     <p className="h-full w-full text-center font-normal text-sm">

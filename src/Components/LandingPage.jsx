@@ -6,15 +6,17 @@ import Features from './LandingPage/Features';
 import Prompt from './LandingPage/Prompt';
 import Contact from './LandingPage/Contact';
 import Products from './LandingPage/Products';
+import Testimonials from './LandingPage/Testimonials';
 
 const LandingPage = () => {
     return (
         <div className='h-full w-full'>
             <NavBar/>
             <Hero/>
+            <Prompt/>
             <Products/>
             <Features/>
-            <Prompt/>
+            <Testimonials/>
             <Contact/>
             <Footer/>
         </div>

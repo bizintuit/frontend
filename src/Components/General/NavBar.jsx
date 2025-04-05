@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div className="h-[15%] w-full p-4 text-white">
+        <div className="h-[15%] w-full p-5 text-white">
             <div className="h-full w-full bg-zinc-700 px-4 rounded-xl flex justify-between">
                 <div className="h-full w-[40%] flex items-center gap-4">
                     <img className="h-[90%]" src=".\Landing Page\icons\logo.png" alt="" />
@@ -15,10 +15,10 @@ const NavBar = () => {
                     <a href="#">Product</a>
                     <a href="#">Pricing</a>
                     <a href="#">About</a>
-                    <Link to="/company-sign-up" className="border border-white rounded px-2 py-1 hover:bg-white hover:text-black ">
+                    <Link to="/employee-login" className="border border-white rounded px-2 py-1 hover:bg-white hover:text-black ">
                         Log In
                     </Link>
-                    <Link to="/company-login" className="border border-white rounded px-2 py-1 bg-white text-black hover:bg-transparent hover:text-white">
+                    <Link to="/company-sign-up" className="border border-white rounded px-2 py-1 bg-white text-black hover:bg-transparent hover:text-white">
                         Sign Up
                     </Link>
                 </div>

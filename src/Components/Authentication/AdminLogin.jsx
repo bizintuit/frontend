@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
+import { Link } from "react-router-dom";
 import InputField from "./Utils/InputField";
 import ButtonField from "./Utils/ButtonField";
 
@@ -7,7 +8,7 @@ const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const AdminLogin = async () => {
+    const AdminLoginFunction = async () => {
         try {
             const response = await axios.post(
                 "http://localhost:8000/api/company_login/",
@@ -49,12 +50,21 @@ const AdminLogin = () => {
                     />
                 </div>
                 <div className="h-1/6 w-5/6 flex flex-col gap-2">
-                    <ButtonField onClickFunc={AdminLogin} prompt={"Log in"}/>
+                    <ButtonField
+                        onClickFunc={AdminLoginFunction}
+                        prompt={"Log in"}
+                    />
                 </div>
                 <div className="h-1/6 w-full flex justify-center rounded-l p-2">
                     <p className="h-full w-full flex justify-center items-center font-normal text-sm">
                         Forgot password?
                     </p>
+                    <Link
+                        to={"/employee-login"}
+                        className="h-full w-full flex justify-center items-center font-normal text-sm"
+                    >
+                        Employee Login
+                    </Link>
                 </div>
             </div>
             <div className="h-[10%] w-3/12 flex justify-center border border-[#4e4e4e] rounded-l p-2">
