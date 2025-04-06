@@ -29,7 +29,7 @@ const AdminLogin = () => {
     return (
         <div className="flex-1 w-full flex flex-col text-white border-white justify-center items-center gap-3">
             <div className="h-4/6 w-3/12 flex flex-col items-center border border-[#4e4e4e] rounded-l p-2 gap-2">
-                <h2 className="h-1/3 w-full flex justify-center items-center font-bold font-Boldonse-sans text-3xl">
+                <h2 className="h-1/3 w-full flex justify-center items-center font-bold font-logo text-3xl">
                     Bizintuit
                 </h2>
 
@@ -70,7 +70,7 @@ const AdminLogin = () => {
             <div className="h-[10%] w-3/12 flex justify-center border border-[#4e4e4e] rounded-l p-2">
                 <p className="h-full w-full flex justify-center items-center font-normal text-l gap-1">
                     Don't have an account?{" "}
-                    <span className="text-blue-500 font-semibold">Sign up</span>
+                    <Link to={"/company-sign-up"} className="text-blue-500 font-semibold">Sign up</Link>
                 </p>
             </div>
         </div>

@@ -28,12 +28,19 @@ const EmployeeLogin = () => {
 
     return (
         <div className="flex-1 w-full flex flex-col text-white border-white justify-center items-center gap-3">
-            <div className="h-4/6 w-3/12 flex flex-col items-center border border-[#4e4e4e] rounded-l p-2 gap-2">
-                <h2 className="h-1/3 w-full flex justify-center items-center font-bold font-Boldonse-sans text-3xl">
+            <div className="h-5/6 w-3/12 flex flex-col items-center border border-[#4e4e4e] rounded-l p-2 gap-4">
+                <h2 className="h-2/6 w-full flex justify-center items-center font-bold font-logo text-3xl">
                     Bizintuit
                 </h2>
 
-                <div className="h-1/3 w-5/6 flex flex-col gap-2">
+                <div className="h-2/6 w-5/6 flex flex-col gap-2">
+                    <InputField
+                        label={"Company ID"}
+                        type={"text"}
+                        placeHolder={"Company ID"}
+                        useStateVar={email}
+                        useStateFunc={setEmail}
+                    />
                     <InputField
                         label={"Email"}
                         type={"text"}
@@ -68,12 +75,12 @@ const EmployeeLogin = () => {
                     </Link>
                 </div>
             </div>
-            <div className="h-[10%] w-3/12 flex justify-center border border-[#4e4e4e] rounded-l p-2">
+            {/* <div className="h-[10%] w-3/12 flex justify-center border border-[#4e4e4e] rounded-l p-2">
                 <p className="h-full w-full flex justify-center items-center font-normal text-l gap-1">
                     Don't have an account?{" "}
                     <span className="text-blue-500 font-semibold">Sign up</span>
                 </p>
-            </div>
+            </div> */}
         </div>
     );
 };
