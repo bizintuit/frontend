@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import SearchField from "./AdminPanel/Utils/SearchField";
 import Options from "./AdminPanel/Utils/Options";
+import AdminStaffSync from "./StaffSync/adminStaffSync";
 
 const AdminPanel = () => {
     const [searchInput, setSearchInput] = useState("");
-    document.title = "Admin Panel";
+    const [currentPanel, setCurrentPanel] = useState("Admin Dashboard");
+
+    document.title = "Admin Panel"; 
 
     return (
         <div className="h-full w-full flex text-white ">
@@ -28,32 +31,28 @@ const AdminPanel = () => {
                 </div>
                 <div className="h-[45%] flex flex-col items-center p-2 gap-1">
                     <Options
-                        onClickFunctions={[console.log, console.log]}
+                        onClickFunctions={[
+                            () => {setCurrentPanel("Admin Dashboard")},
+                            () => {setCurrentPanel("Staff Sync")},
+                            () => {setCurrentPanel("Finance Sync")},
+                        ]}
                         images={[
                             "./Admin Panel/icons/dashboard.png",
-                            "./Admin Panel/icons/staffsync.png",
+                            "./Admin Panel/icons/staff-sync.png",
+                            "./Admin Panel/icons/finance-sync.png",
                         ]}
-                        prompts={["Dashboard", "Staff Sync"]}
-                        activeButtonIndex={0}
+                        prompts={["Dashboard", "Staff Sync", "Finance Sync"]}
+                        activeButtonIndex={1}
                     />
                 </div>
                 <div className="h-[3%] w-full items-center flex px-2 bg-transparent">
                     <hr className="w-full border border-[#303030] " />
                 </div>
-                <div className="h-[45%] flex flex-col items-center p-1 gap-2">
-                    <Options
-                        onClickFunctions={[console.log, console.log]}
-                        images={[
-                            "./Admin Panel/icons/dashboard.png",
-                            "./Admin Panel/icons/staffsync.png",
-                        ]}
-                        prompts={["Dashboard", "Staff Sync"]}
-                        onClickActive={false}
-                    />
-                </div>
             </div>
             <div className="h-full w-10/12 flex bg-[#0c0c0c] pt-3 pr-2">
-                <div className="h-full w-full flex bg-black rounded-t-md"></div>
+                <div className="h-full w-full flex bg-black rounded-t-md">
+                    {currentPanel == "Admin Dashboard" ? "" : currentPanel == "Staff Sync" ? <AdminStaffSync/> : ""}
+                </div>
             </div>
         </div>
     );
